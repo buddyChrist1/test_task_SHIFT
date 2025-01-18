@@ -9,7 +9,7 @@
 
 Пример запуска:
 ```
-java -jar name.jar file_name1.txt file_name2.txt
+java -jar test_task-1.0-SNAPSHOT.jar file_name1.txt file_name2.txt
 ```
 
 # Опции запуска:
