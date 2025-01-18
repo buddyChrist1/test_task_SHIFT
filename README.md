@@ -71,7 +71,7 @@ sample-integers.txt
 1234567890123456789
 100500
 ```
-sample-oats.txt
+sample-floats.txt
 ```
 1.528535047E-25
 3.1415
