@@ -4,13 +4,8 @@
 
 При написании использовались:
 * jdk: liberica 21.0.2+14-LTS https://github.com/bell-sw/Liberica/releases/tag/21.0.2%2B14
-* Система сборки: Apache Maven 3.9.8 https://maven.apache.org/docs/3.9.8/release-notes.html
+* Система сборки: Maven 3.9.8 https://maven.apache.org/docs/3.9.8/release-notes.html
 * Зависимости maven: maven-jar-plugin 3.3.0 https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin/3.3.0
-
-Пример запуска:
-```
-java -jar test_task-1.0-SNAPSHOT.jar file_name1.txt file_name2.txt
-```
 
 # Опции запуска:
 
@@ -35,9 +30,18 @@ java -jar test_task-1.0-SNAPSHOT.jar file_name1.txt file_name2.txt
 * **-f** Полная статистика.
   Для чисел содержит минимальное и максимальное значения, сумма и среднее. Для строк, помимо их количества, содержит также размер самой короткой строки и самой длинной.
 
-Порядок вызова опций не имеет значения.
+# Инструкция
 
-Имена передаваемых фалов должны идти после вызова опций и иметь формат .txt
+* Порядок вызова опций не имеет значения.
+* Имена передаваемых фалов должны идти после вызова опций и иметь формат .txt
+* Целые числа не должны превышать диапазона типа **Long**
+* Дробные числа не должны превышать диапазон типа **Double**
+* Пустые строки не учитываются при подсчете 
+
+Пример запуска:
+```
+java -jar test_task-1.0-SNAPSHOT.jar file_name1.txt file_name2.txt
+```
 
 # Пример работы
 
@@ -45,16 +49,16 @@ java -jar test_task-1.0-SNAPSHOT.jar file_name1.txt file_name2.txt
 ``` txt
 Lorem ipsum dolor sit amet
 45
-Пример 
+Пример
 3.1415
 consectetur adipiscing
 -0.001
-тестовое задание 
+тестовое задание
 100500
 ```
 Входной файл in2.txt
 ```
-Нормальная форма числа с плавающей запятой 
+Нормальная форма числа с плавающей запятой
 1.528535047E-25
 Long
 1234567890123456789
@@ -65,23 +69,23 @@ java -jar util.jar -s -a -p sample- in1.txt in2.txt
 ```
 Выходные файлы
 
-sample-integers.txt
+- sample-integers.txt
 ```
 45
 1234567890123456789
 100500
 ```
-sample-floats.txt
+- sample-floats.txt
 ```
 1.528535047E-25
 3.1415
 -0.001
 ```
-sample-strings.txt
+- sample-strings.txt
 ```
 Lorem ipsum dolor sit amet
-Нормальная форма числа с плавающей запятой 
-Пример 
+Нормальная форма числа с плавающей запятой
+Пример
 Long
 consectetur adipiscing
-тестовое задание 
+тестовое задание
